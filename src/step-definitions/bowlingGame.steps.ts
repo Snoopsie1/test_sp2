@@ -56,7 +56,7 @@ defineFeature(feature, (test) => {
 			rollsThrown = f;
 		});
 
-		when(/^I hit (\d+) pin 2 times$/, (pinsHit: number) => {
+		when(/^I hit (\d+) pins 2 times$/, (pinsHit: number) => {
 			hitPins = pinsHit;
 			rollSpare(game);
 			game.roll(3);
