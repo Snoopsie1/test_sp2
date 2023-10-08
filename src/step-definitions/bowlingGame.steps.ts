@@ -18,6 +18,7 @@ defineFeature(feature, (test) => {
 		game.roll(5);
 	};
 
+	// - - - - - - - - - - Gutter Game Test - - - - - - - - - -
 	test('Gutter game', ({ given, when, then }) => {
 		const game = new Game();
 		given(/^that I throw the bowling-ball (\d+) times$/, (f: number) => {
@@ -34,6 +35,7 @@ defineFeature(feature, (test) => {
 		});
 	});
 
+	// - - - - - - - - - - Rolling All Ones Test - - - - - - - - - -
 	test('Hitting 1 pin 20 times', ({ given, when, then }) => {
 		const game = new Game();
 		given(/^that I throw the bowling-ball (\d+) times$/, (f: number) => {
@@ -50,6 +52,7 @@ defineFeature(feature, (test) => {
 		});
 	});
 
+	// - - - - - - - - - - Rolling 1 Spare Test - - - - - - - - - -
 	test('Hitting 1 spare', ({ given, when, then }) => {
 		const game = new Game();
 		given(/^that I throw the bowling-ball (\d+) times$/, (f: number) => {
@@ -74,6 +77,7 @@ defineFeature(feature, (test) => {
 		});
 	});
 
+	// - - - - - - - - - - Rolling 1 Strike Test - - - - - - - - - -
 	test('Hitting 1 strike', ({ given, when, then }) => {
 		const game = new Game();
 		given(/^that I throw the bowling-ball (\d+) time$/, (f: number) => {
@@ -90,6 +94,7 @@ defineFeature(feature, (test) => {
 		});
 	});
 
+	// - - - - - - - - - - Rolling a Perfect Game Test - - - - - - - - - -
 	test('Getting a perfect game', ({ given, when, then }) => {
 		const game = new Game();
 		given(/^that I throw the bowling-ball (\d+) times$/, (f: number) => {
