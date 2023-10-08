@@ -73,4 +73,36 @@ defineFeature(feature, (test) => {
 			expect(game.score()).toBe(Number(expectedScore));
 		});
 	});
+
+	test('Hitting 1 strike', ({ given, when, then }) => {
+		const game = new Game();
+		given(/^that I throw the bowling-ball (\d+) time$/, (f: number) => {
+			rollsThrown = f;
+		});
+
+		when(/^I hit (\d+) pins$/, (pinsHit: number) => {
+			hitPins = pinsHit;
+			rollMany(game, rollsThrown, Number(hitPins));
+		});
+
+		then(/^the score should be (\d+)$/, (expectedScore: number) => {
+			expect(game.score()).toBe(Number(expectedScore));
+		});
+	});
+
+	test('Getting a perfect game', ({ given, when, then }) => {
+		const game = new Game();
+		given(/^that I throw the bowling-ball (\d+) times$/, (f: number) => {
+			rollsThrown = f;
+		});
+
+		when(/^I hit (\d+) pins$/, (pinsHit: number) => {
+			hitPins = pinsHit;
+			rollMany(game, rollsThrown, Number(hitPins));
+		});
+
+		then(/^the score should be (\d+)$/, (expectedScore: number) => {
+			expect(game.score()).toBe(Number(expectedScore));
+		});
+	});
 });

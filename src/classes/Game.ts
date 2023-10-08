@@ -1,5 +1,5 @@
 export class Game {
-	private rolls: number[] = new Array(21);
+	private rolls: number[] = new Array(21).fill(0);
 	private currentRoll: number = 0;
 
 	public roll(pins: number): void {

@@ -19,3 +19,12 @@ Feature: Bowling Game
     And I hit 3 pins 18 times
     Then the score should be 16
 
+  Scenario: Hitting 1 strike
+    Given that I throw the bowling-ball 1 time
+    When I hit 10 pins
+    Then the score should be 10
+
+  Scenario: Getting a perfect game
+    Given that I throw the bowling-ball 12 times
+    When I hit 10 pins
+    Then the score should be 300
