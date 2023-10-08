@@ -16,9 +16,6 @@ Feature: Bowling Game
   Scenario: Hitting 1 spare
     Given that I throw the bowling-ball 20 times
     When I hit 5 pins 2 times
+    And I hit 3 pins 18 times
     Then the score should be 16
 
-  Scenario: Hitting 1 strike
-    Given that I throw the bowling-ball 20 times
-    When I hit 5 pin 2 times
-    Then the score should be 16

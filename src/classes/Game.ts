@@ -21,7 +21,7 @@ export class Game {
 				frameIndex += 2;
 			}
 		}
-		return Number(score);
+		return score;
 	}
 
 	private isStrike(frameIndex: number): boolean {

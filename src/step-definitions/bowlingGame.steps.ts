@@ -25,8 +25,8 @@ defineFeature(feature, (test) => {
 		});
 
 		when(/^I hit (\d+) pins$/, (pinsHit: number) => {
-			hitPins = pinsHit;
-			rollMany(game, rollsThrown, hitPins);
+			hitPins = Number(pinsHit);
+			rollMany(game, Number(rollsThrown), hitPins);
 		});
 
 		then(/^the score should be (\d+)$/, (expectedScore: number) => {
@@ -41,12 +41,12 @@ defineFeature(feature, (test) => {
 		});
 
 		when(/^I hit (\d+) pin 20 times$/, (pinsHit: number) => {
-			hitPins = pinsHit;
-			rollMany(game, rollsThrown, hitPins);
+			hitPins = Number(pinsHit);
+			rollMany(game, Number(rollsThrown), hitPins);
 		});
 
 		then(/^the score should be (\d+)$/, (expectedScore: number) => {
-			expect(game.score().toString().length).toBe(Number(expectedScore));
+			expect(game.score()).toBe(Number(expectedScore));
 		});
 	});
 
@@ -59,9 +59,15 @@ defineFeature(feature, (test) => {
 		when(/^I hit (\d+) pins 2 times$/, (pinsHit: number) => {
 			hitPins = pinsHit;
 			rollSpare(game);
-			game.roll(3);
-			rollMany(game, rollsThrown - 3, 0);
 		});
+
+		when(
+			/^I hit (\d+) pins (\d+) times$/,
+			(pinsHit: number, timesThrown: number) => {
+				game.roll(Number(pinsHit));
+				rollMany(game, Number(timesThrown), 0);
+			}
+		);
 
 		then(/^the score should be (\d+)$/, (expectedScore: number) => {
 			expect(game.score()).toBe(Number(expectedScore));
