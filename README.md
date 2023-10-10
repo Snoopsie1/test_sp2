@@ -44,7 +44,7 @@ To run the tests of this repository, follow these steps:
 
 ## 3. Investigation of Tools
 
-### _JUnit5 Investigate JUnit 5 (Jupiter). Explain the following, and how they are useful.
+### _JUnit5 Investigate JUnit 5 (Jupiter). Explain the following, and how they are useful._
 
 #### `@Tag`
 - `@Tag` allows you to categorize your test methods or classes using one or more tags.
