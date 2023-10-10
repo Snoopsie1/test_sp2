@@ -20,6 +20,28 @@ _Identify the types of testing you would perform on a computer mouse, to make su
 
 The [Therac-25](https://en.wikipedia.org/wiki/Therac-25) was a radiation therapy machine produced by Atomic Energy of Canada Limited (AECL) in 1982 after the Therac-6 and Therac-20 units (the earlier units had been produced in partnership with CGR of France). It was involved in at least six accidents between 1985 and 1987, in which patients were given massive overdoses of radiation, approximately 100 times the intended dose. These accidents highlighted the dangers of software control of safety-critical systems, and they have become a standard case study in health informatics and software engineering. The software was written in assembly language for a custom CPU.
 
+## 2. Two Katas (Running the tests)
+
+To run the tests of this repository, follow these steps:
+
+1. First, make sure you have Node.js and npm (Node Package Manager) installed on your system.
+
+2. Clone this repository to your local machine if you haven't already:
+
+   ```bash
+   git clone https://github.com/Snoopsie1/test_sp2/
+   ```
+3. Navigate to the root directory of the cloned repository in your terminal.
+
+4. Install the necessary dependencies by running the following command:
+   ```bash
+   npm install
+   ```
+5. After the dependencies are installed, you can run the tests by executing the following command:
+   ```bash
+   npm test
+   ```
+
 ## 3. Investigation of Tools
 
 ### _JUnit5 Investigate JUnit 5 (Jupiter). Explain the following, and how they are useful.
